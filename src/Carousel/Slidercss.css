@@ -1,3 +1,7 @@
-.borderradius{
+
+.ImageItem
+{
     border-radius: 20px;
+    height:550px;
 }
+

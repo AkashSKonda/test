@@ -1,0 +1,9 @@
+.hrtagcolor{
+    color: linear-gradient(90deg, rgba(20,143,59,1) 0%, rgba(37,186,84,1) 53%, rgba(185,218,114,1) 100%);
+}
+.marqueetag
+{
+    color:  rgba(20,143,59,1) !important;
+    font-weight: 600;
+    font-size: 25px !important;
+}

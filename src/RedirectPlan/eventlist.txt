@@ -1,0 +1,85 @@
+import React from 'react';
+import { useState, useEffect } from "react";
+import {useParams} from "react-router-dom"
+import {Card, Container,Row,Col } from 'react-bootstrap'
+import './EventList.css'
+
+export function EventList(props){
+    const {listname} = useParams();
+    const [state, setState] = useState([])
+
+
+    useEffect(() => {  
+      fetch(`http://localhost:8080/packcompdetails`).then(res => res.json()).then(response => {
+        setState(response.state);
+         
+        }).catch(error => console.log(error));
+    }, [state]);
+    // useEffect(() => {
+    //     fetch("http://localhost:8080/packcompdetails").then(res => setState(res.state))
+    // })
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await fetch(`http://localhost:8080/packcompdetails`);
+
+  //     setData(result.data);
+  //   };
+
+  //   fetchData();
+  // }, []);
+    return(
+      
+        <>        
+        <Container>
+        <h3 style={{textAlign:'center',margin:25}}>{listname} </h3>
+        <Row>  
+        {state.map(item => (        
+        <Col xs="6" >
+        <a href="/EventPage" style={{color:'black',textDecoration:'none'}}><Card className="card">
+              <Card.Img variant="top" src="/images/sub1.jpg"  style={{borderRadius:20}}/>
+              <Card.Body>
+                <Card.Text >
+                  {item.tourname}  
+                     {listname}
+                </Card.Text>
+              </Card.Body>
+          </Card>
+          </a>
+        </Col>
+         ))}   
+        <Col xs="6" >
+          
+        <Card className="card">
+              <Card.Img variant="top" src="/images/sub1.jpg"  />
+              <Card.Body>
+                <Card.Text>
+                Event Title : 
+                {listname}
+                </Card.Text>
+              </Card.Body>
+          </Card>
+        </Col>
+        <Col xs="6" >
+          
+        <Card className="card">
+              <Card.Img variant="top" src="/images/sub1.jpg"  />
+              <Card.Body>
+                <Card.Text>
+                Event Title : 
+                {listname}
+                </Card.Text>
+              </Card.Body>
+          </Card>
+        </Col>
+        
+      </Row>
+       
+        </Container>
+        
+        <br></br>
+        </>
+    )
+}
+
+export default EventList;
