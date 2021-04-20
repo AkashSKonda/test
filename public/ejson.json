@@ -1,0 +1,32 @@
+[{
+	"id": "1",
+	"name": "Raj",
+	"gender": "Male",
+	"address": "3/A , Parekh Apt,Sarojani Road , Vile parle West",
+	"mobile":"8999998888"
+	
+},
+{
+	"id": "2",
+	"name": "Geeta",
+	"gender": "female",
+	"address": " Vile parle West",
+	"mobile":"9999999999"
+	
+},
+{
+	"id": "3",
+	"name": "MONa",
+	"gender": "female",
+	"address": ",Sarojani Road , Vile parle West",
+	"mobile":"88888888888"
+	
+},
+{
+	"id": "4",
+	"name": "suraj",
+	"gender": "Male",
+	"address": " Parekh Apt, Vile parle West",
+	"mobile":"777777777"
+	
+}]
